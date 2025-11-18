@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>이미지 배치하고 롤오버시 블러 효과 적용하기</title>
+      <meta charset="UTF-8">
+      <style type="text/css">
+         *{margin: 0; padding: 0;}
+         body{margin-top: 30px;}
+         body h1{
+            text-align: center;
+            font-style: italic;
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 0 0 10px #666;
+         }
+         body #bookList{
+            background: url(./images/book_bg.png) no-repeat;
+            width: 498px;
+            height: 246px;
+            border: 5px solid #dbdbdb;
+            margin: 20px auto;
+            border-radius: 30px;
+         }
+         body #bookList ul{
+            list-style: none;
+            display: flex;
+            position: relative;
+            top: 24px;
+            left: 20px;
+         }
+         body #bookList ul li{
+            margin-right: 63px;
+         }
+         body #bookList ul li a{}
+         body #bookList ul li a span{}
+         body #bookList ul li:hover a span img{
+            box-shadow: 0 0 50px #090;
+         }
+         body #bookList ul li a span .hit{}
+         
+      </style>
+   </head>
+
+   <body>
+      <h1>New Book</h1>
+      <div id="bookList">
+         <ul>
+            <li>
+               <a href="#">
+                  <span>
+                     <img src="images/book1.png" width="107" height="156" alt="book1" class="frame"/>
+                     <span class="hit"></span>
+                  </span>
+               </a>
+            </li>
+            <li><a href="#"><span><img src="images/book2.png" width="107" height="156" alt="book2" class="frame"/><span class="hit"></span></span></a></li>
+            <li><a href="#"><span><img src="images/book3.png" width="107" height="156" alt="book3" /><span class="hit"></span></span></a></li>
+         </ul>
+      </div>
+   </body>
+</html>
+
+<!-- 선언문먼저 작성 body부터 body #bookList ul li a span .hit까지
+- 11-h1- 기울기주기/ 폰트조정/ 흰색칼라주기/ <text-shadow주기
+- 16 body #bookList 
+    - no- 반복하지마-repeat 검사보기에서 사이즈 확인 498, 246사이즈지정
+    - border-5px solid
+    - margin으로 가운데 정렬만들어주고
+-23 -25- dispiay:flex -옆으로 붙이기
+    -position-relative로 자리조정후 검사보기해서 사이즈확인후 top left자리조정.
+-30에 31- 여백주기
+-22 -모서리 둥글게 -border-라디오스
+-37- box-shadow로 그림자 만들어주기 -->

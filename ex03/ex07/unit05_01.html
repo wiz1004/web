@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>이미지, 색상, 글자 투명도 조정하기</title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         *{margin: 0;padding: 0;}
+         body{
+            background: #ccc url(./images/bg_gray.png) no-repeat;
+         }
+         div{
+            background: url(./images/circle.png) no-repeat;
+            width: 530px;
+            height: 424px;
+            opacity: .8;
+            margin: 0 auto;
+            padding-top: 150px;
+            padding-left: 20px;
+         }
+         p{}
+         .textBox{
+            width: 25%;
+            background: hsla(180,100%,100%,.7);
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 20px;
+         }
+         .people{
+			font: 3em "Arial Black";
+			padding-top: 130px;
+			color: rgba(255,255,255,.5);/* 흰색에 .5 만큼줌 */
+		 }
+      </style>
+   </head>
+
+   <body>
+      <div>
+         <p class="textBox">
+               Freedom is not worth having
+               if it does not include the freedom to make mistakes.            
+         </p>
+         <p class="people">- Mahatma Gandhi - <p>
+      </div>
+   </body>
+</html>
+
+
+<!-- *marin 0 padd 0
+body에 배경주고, 이미지 불러와서, 한칸띄고, 반복하지말아줄래no repeat
+background-color는 컬러만 쓰는것임.
+div에 p에 텍스트박스 .people불러와서
+	-div에 이미지불러와서 url(./images/circle)불러와서 no-repeat고정시키고
+	-감사 body안에 div 이미지 사이즈 확인하고
+	-cirlc에 사이즈 부여해줌
+	-opacity: .8....투명도 줌. 0은 안보임..1은 불투명.하위속성에가지 영향을줌
+	-maggin 0 auto 로 가운데로 보내주고, padding-top으로 위에서 띄어주게함
+textBox 에 조정해주기
+-hsla----구글에서 css hsla색상 검색 밝기를 0을 주면 무조건 흰색 .7정도 투명도
+ 
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>이미지, 색상, 글자 투명도 조정하기</title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         *{margin: 0;padding: 0;}
+         body{
+            background: #ccc url(./images/bg_gray.png) no-repeat;
+         }
+         div{
+            background: url(./images/circle.png) no-repeat;
+            width: 530px;
+            height: 424px;
+            opacity: .8;
+            margin: 0 auto;
+            padding-top: 150px;
+            padding-left: 20px;
+         }
+         p{}
+         .textBox{
+            width: 25%;
+            background: hsla(180,100%,100%,.7);
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 20px;
+         }
+         .people{}
+      </style>
+   </head>
+
+   <body>
+      <div>
+         <p class="textBox">
+               Freedom is not worth having
+               if it does not include the freedom to make mistakes.            
+         </p>
+         <p class="people">- Mahatma Gandhi - <p>
+      </div>
+   </body>
+</html>
+-->

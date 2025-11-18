@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        #wrap{width: 500px; margin: 50px auto;}
+        #wrap h1{text-align: center;}
+        .box{
+            width: 100%;
+            border: 5px solid #000;
+            padding: 20px;
+        }
+        header{
+             border: 5px solid #000;
+             margin-bottom: 20px;
+             padding: 20px;
+             text-align: center;
+        }
+        nav{
+            border: 5px solid #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav1{width:25% }
+        .nav2{width: 48%}
+        nav>div{
+            background: cyan;
+            padding: 20px;
+        }
+        article{
+            border: 5px solid #000;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        article p{
+            text-align: left;
+        }
+        article figure{
+            border: 5px solid #000;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        article figure figcaption{
+            background: pink;
+            padding: 20px;
+        }
+        footer{
+            border: 5px solid #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        footer>div{
+            background: red;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer1{width: 25%}
+        .footer2{width: 48%}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Semantic</h1>
+        <div class="box">
+            <header>header
+                <nav>
+                    <div class="nav1">&nbsp;</div>
+                    <div class="nav2">nav</div>
+                    <div class="nav1">&nbsp;</div>
+                </nav>
+            </header>
+            <article>article
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur <br>
+                    Aspernatur eaque error ipsum  <br>
+                    similique incidunt ducimus optio neque voluptas
+                </p>
+                <figure>
+                    <figcaption>figure</figcaption>
+                </figure>
+            </article>
+            <footer>
+               
+                    <div class="footer1">&nbsp;</div>
+                    <div class="footer2">footer</div>
+                    <div class="footer1">&nbsp;</div>
+               
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- #wrap라고 임으로 이름지정해줌
+  -자식또는 자손석택시
+(박스안에 보더 들어가게하기)
+헤더,아티컬,푸터 먼저 만들고
+각 header에 border지정하고
+여백을 주는데(헤더에 20 여백, 아티클에도 magin -bottom20px여백줌)
+각각 padding 주어서 주리여백 주고, <text-aline센터 줌
+nav이름 만들고 nav2에 "나비"글씨들어옴
+노란색깔 지움
+백그라운드 컬러 지정
+&nbsp 태그로 공백을 줌 
+nav1과 nav2에 넚이 30%지정해줌,
+헤더안에 justify-content태크로 띄어저있는 박스 만듬
+아티클 글자 센터 맞추고
+P태그로 단락만들고lorem소문자태그 쓰고 tap키누르면 의미없는 글씨문장을 만들어줌
+아티클안에 figuer박스 넣기
+스타일에서 아티클>p>피규어>피규어캡션지정해주고
+psms레프트 정렬시키고,
+피큐어한테 border, padding 지정,마진탑에서 20px떨어뜨림
+백그라운드 색깔지정
+퓨터는 nav의 형식과 같아서 글어와서 씀.
+footer내용들 바꿔줌
+스타일에 footer에 display, jus~~
+footer 색깔지정 퓨1,퓨터2, 넓이 지정
+패딩20 지정택스트어라인 센터 지정
+
+
+-->

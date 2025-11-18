@@ -1,0 +1,101 @@
+nav{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    height: 80px;
+}
+nav .bg{
+    width: 100%;
+    height: 240px;
+    background: yellowgreen;
+    position: absolute;
+    top: 80px;
+    display: none;
+}
+nav:hover .bg{
+    display: block;
+}
+nav>ul{
+    display: flex; justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+nav>ul>li{width: 130px; text-align: center;}
+nav>ul>li>a{
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+    display: block;
+    padding: 10px 20px;
+}
+nav>ul>li:hover>a{
+    color: #f00;
+}
+nav>ul>li>ul{
+    display: none; position: absolute;
+    top:80px;
+    width: 130px;
+
+}
+nav:hover>ul>li>ul{display: block;}
+nav>ul>li>ul>li{
+    text-align: center;
+    width: 100%;
+}
+nav>ul>li>ul>li>a{
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+    color: #fff;
+}
+nav>ul>li>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+
+/* 12- position: relative;-내가기준이야
+
+띄어쓰기는 하위속성을 선택하라고 할때 띄어스기해야함
+10- 글시간격 떨어뜨려줌
+12-uppercass -대문자로 바꿔
+font-weight: bold;글자긁게 */
+
+/* a{text-decoration: none; color: #000}
+
+nav{
+    background: rgb(0, 153, 255);
+    padding: 20px 0;
+}
+nav>ul{
+    display: flex;
+    position: relative;
+    
+}
+nav>ul>li{position: relative;}
+nav>ul>li>a{
+    padding: 19px 20px; */ /* 손가락영영을 넓여줘야함 */
+    t/* ext-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+nav>ul>li>ul{
+    display: none; position: absolute;
+    top: 36px; *//* 손가락영영을 넓여줘야함 -우클릭해서 검사해서 수치확인*/
+  /*   width: 100%;
+    
+}
+nav>ul:hover>li>ul{display: block; text-align: center;}
+nav>ul>li>ul{
+    transition: .5s; */ /* 0.5초동안 나타남 */
+/* }
+nav>ul>li>ul>li:hover{ */ /* (hover마아스올렸을때 액션지정) */
+    /* background: red;
+}
+nav>ul>li>ul>li>a{ */ /* a는 하이퍼링크기능 */
+    /* display: block; */ /* (인라인요소롸서 블럭화 시켜야 padding값이 먹힘) */
+   /*  padding: 20px; */ /* 마우스영역을 넓혀줌 */
+/* }
+nav>ul>li>ul>li:hover>a{
+    color: #fff;
+}
+nav>ul>li>{}*/

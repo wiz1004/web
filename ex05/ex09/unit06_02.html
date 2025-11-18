@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드</title>
+  <style>
+   .cnt>div{color: #fff; text-align: center; font-size: 2em;}
+   .cnt>div:nth-child(1){background: red;}
+   .cnt>div:nth-child(2){background: rgb(204, 234, 33);}
+   .cnt>div:nth-child(3){background: rgb(182, 7, 209);}
+   .cnt>div:nth-child(4){background: rgb(84, 183, 48);}
+   .cnt>div:nth-child(5){background: rgb(125, 48, 152);}
+   .cnt>div:nth-child(6){background: rgb(184, 231, 17);}
+   .cnt{
+      display: grid;
+      /* grid-template-columns: 100px 200px 300px; */
+      /* grid-auto-rows: 100px ; */
+      margin-bottom: 10px;
+   }
+   .cnt1{
+      grid-template-columns:repeat(3, 1fr)
+   }
+   .cnt2{
+      font-size: 12px;
+      width:1200px;
+      border:1px solid #ccc;
+      grid-template-columns:repeat(3, 1fr);
+      grid-template-rows: minmax(300px, auto);
+   }
+  </style>
+</head>
+<body>
+   <div class="cnt">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+   </div>
+   <div class="cnt cnt1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+   </div>
+   <div class="cnt cnt2">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sed doloremque iure quam laborum pariatur architecto alias odio cupiditate nihil modi totam deleniti commodi, incidunt adipisci blanditiis quo harum doloribus?</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sed doloremque iure quam laborum pariatur architecto alias odio cupiditate nihil modi totam deleniti commodi, incidunt adipisci blanditiis quo harum doloribus?</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sed doloremque iure quam laborum pariatur architecto alias odio cupiditate nihil modi totam deleniti commodi, incidunt adipisci blanditiis quo harum doloribus?</div>
+      <div> Et sed doloremque iure quam laborum pariatur architecto alias odio cupiditate nihil modi totam deleniti commodi, incidunt adipisci blanditiis quo harum doloribus?</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sed ?</div>
+   </div>
+</body>
+</html>
+
+15-부모에게 16 그리드해라 지시하고
+17-grid-temlate-columns: 100px 500px 200px로 칸을 만들어주는것임
+-18 -그리드 템플-row 로 두칸 만들어줌
+교재375page

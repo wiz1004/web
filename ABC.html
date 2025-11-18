@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자용 영문 타자 연습기</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 기본 스타일 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 80%;
+    max-width: 700px;
+}
+
+/* 문장 표시 영역 */
+.sentence {
+    font-size: 1.5em; /* 폰트 크기 */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    letter-spacing: 1px; /* 자간 */
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+/* JS가 추가할 스타일 (글자별 색상) */
+.sentence span.correct {
+    color: #4CAF50; /* 초록색 (맞음) */
+}
+
+.sentence span.incorrect {
+    color: #F44336; /* 빨간색 (틀림) */
+    background-color: #ffcdd2; /* 연한 빨간 배경 */
+    text-decoration: underline;
+}
+
+/* 타이핑 입력 영역 */
+.typing-area {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+    resize: none; /* 크기 조절 방지 */
+}
+
+.typing-area:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* 통계 (WPM, 정확도) */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+/* 리셋 버튼 */
+#reset-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+#reset-button:hover {
+    background-color: #2980b9;
+}
+    </style>
+</head>
+<body>
+    <h1>개발자용 영문 타자 연습기</h1>
+    
+    <div class="container">
+        <div id="sentence-display" class="sentence">
+            </div>
+        
+        <textarea id="typing-input" class="typing-area" rows="5" placeholder="여기에 문장을 입력하세요..." autofocus></textarea>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <strong>WPM:</strong>
+                <span id="wpm">0</span>
+            </div>
+            <div class="stat-item">
+                <strong>정확도:</strong>
+                <span id="accuracy">100</span>%
+            </div>
+        </div>
+        
+        <button id="reset-button">새 문장 불러오기</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

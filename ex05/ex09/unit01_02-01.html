@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE HTML>
+<html>
+	<head>
+		<title> 그라데이션 메뉴바 만들기 </title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+			body {
+				font:0.95em Arial,sans-serif;
+				margin:50px 0px;
+				}
+			h1 {
+				text-shadow:0px 0px 5px #666;
+				text-align:center;
+				font-size:3em;
+				letter-spacing:5px;
+				color:#d81b21;
+				text-transform:uppercase;
+				}
+			/* Gradient Menu Bar */
+            nav{
+                background: linear-gradient(to bottom, #cf0404 0%, #5e0909 99%);
+            }
+            nav ul{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+            }
+            nav ul li{}
+            nav ul li a{
+                color: ;
+            }
+
+		
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+		</header>
+		<nav>
+				<ul id="topNav">
+					<li><a href="">best 50</a></li> 
+					<li><a href="">high heel</a></li>  
+					<li><a href="">casual</a></li> 
+					<li><a href="">flat</a></li> 
+					<li><a href="">boots</a></li> 
+					<li><a href="">sandal</a></li> 
+					<li><a href="">bag</a></li> 
+					<li><a href="">acc</a></li> 
+					<li><a href="">sale</a></li> 
+				</ul>
+		</nav>
+	</body>
+</html>
+
+
+- 28- 색깔주기
+-40 - 니가 기준이야..라는 뜻 -->
+
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title> 그라데이션 메뉴바 만들기 </title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         body {
+            font:0.95em Arial,sans-serif;
+            margin:50px 0px;
+            }
+         h1 {
+            text-shadow:0px 0px 5px #666;
+            text-align:center;
+            font-size:3em;
+            letter-spacing:5px;
+            color:#d81b21;
+            text-transform:uppercase;
+            }
+         /* Gradient Menu Bar */
+            nav{   
+               background: linear-gradient(to bottom,  #cf0404 0%,#5e0909 99%); 
+            }
+            nav ul{
+               display: flex;
+               justify-content: center;
+               list-style: none;
+            }
+            nav ul li:hover a{  
+               background: linear-gradient(to bottom,  #aaaaaa 1%,#3d3d3d 100%); 
+
+            }
+            nav ul li a{
+               color: #fff; 
+               font-size: 20px; 
+               text-decoration: none; 
+               text-transform: uppercase;
+               padding: 20px;
+               display: block;
+               font-weight: bold;
+               position: relative;
+            }
+            nav ul li a:after{
+               content: "/"
+            }
+      
+      </style>
+   </head>
+
+   <body>
+      <header>
+         <h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+      </header>
+      <nav>
+            <ul id="topNav">
+               <li><a href="">best 50</a></li> 
+               <li><a href="">high heel</a></li>  
+               <li><a href="">casual</a></li> 
+               <li><a href="">flat</a></li> 
+               <li><a href="">boots</a></li> 
+               <li><a href="">sandal</a></li> 
+               <li><a href="">bag</a></li> 
+               <li><a href="">acc</a></li> 
+               <li><a href="">sale</a></li> 
+            </ul>
+      </nav>
+   </body>
+</html>

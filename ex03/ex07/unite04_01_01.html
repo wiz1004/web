@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{margin: 50px;}
+        #container .desc{
+            width: 200px;
+        }
+        #container #clip-border{
+            background-clip: border-box;
+        }
+        #container #clip-padding{
+            background-clip: content-box;
+        }
+        #container #clip-content{}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet unde nam nihil earum qui ex vero quas quos error. Vel animi quo cupiditate. Esse porro officia sequi ipsum, necessitatibus quos.
+        </div>
+        <div class="desc" id="clip-padding">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet unde nam nihil earum qui ex vero quas quos error. Vel animi quo cupiditate. Esse porro officia sequi ipsum, necessitatibus quos.
+        </div>
+        <div class="desc" id="clip-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet unde nam nihil earum qui ex vero quas quos error. Vel animi quo cupiditate. Esse porro officia sequi ipsum, necessitatibus quos.
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!--
+#container들을 불러서 위치 ,넓이, 백그라운드,여백주기
+
+
+-div하나 생성해서 id 지정-형태구성하기위해서
+   - .desc#clip-border>lorem으로 바로 내용 넣기
+   -두개더 만들어 넣코 
+   -#container야~~불러서 높이를 auto주고, magin-bottom주고
+   -#container .desc~불러서 스타일주고 -->

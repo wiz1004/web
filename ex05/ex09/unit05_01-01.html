@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>로긴 폼 문서 만들기</title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         body, h1, p, input, label { 
+            margin:0px;
+            padding:0px;
+            font-family:"맑은 고딕",돋움;
+            font-size:13px;
+            }
+         body { 
+            border-top:15px solid #333;
+            }
+         h1 {
+            font-size:50px;
+            letter-spacing:-3px;
+            color:#C8C8C8;
+            text-align:center;
+            border-top: 40px solid orangered;
+            padding-top: 20px;
+            }
+         /* Login Form Design */
+         #loginForm fieldset{
+            width: 330px;
+            padding: 50px;
+            margin: 10px auto;
+            border: 5px solid #ddd;
+            border-radius: 20px;
+         }
+         #loginForm fieldset legend{
+            display: none;
+         }
+         #loginForm fieldset #login{
+            float: left;
+         }
+         #loginForm fieldset #login p{}
+         #loginForm fieldset #login p label{
+            display: inline-block;
+            width: 58px;
+         }
+         #loginForm fieldset #login p input{
+            padding: 2px;
+            margin-bottom: 5px;
+         }
+         #btnLogin{
+            float: left;
+            margin-left: 10px;
+            background: orangered;
+            color: #fff;
+            border: none;
+            padding: 18px 20px;
+            border-radius: 5px;
+         }
+         #btn1, #btn2{
+            clear: both;
+            margin-left: 62px;
+            padding: 5px 0;
+         }
+         #btn2 input[type="button"]{
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <form id="loginForm">
+         <h1>Member Login</h1>
+         <fieldset>   
+            <legend>Member Loin</legend>
+            <div id="login">
+               <p>
+                  <label for="userId" class="labelStyle">아이디</label>
+                  <input type="text" id="userId" />
+               </p>
+               <p>
+                  <label for="userPWD" class="labelStyle">비밀번호</label>
+                  <input type="password" id="userPWD" />
+               </p>
+            </div>
+            <input type="submit" value="로그인하기" id="btnLogin" />
+            <p id="btn1">
+               <input type="checkbox" id="saveId" value="savedIdYes" />
+               <label for="saveId">아이디저장</label>   
+               <input type="checkbox" id="secure" value="secureYes" />
+               <label for="secure">보안접속</label>   
+            </p>
+            <p id="btn2">
+               <input type="button" value="회원가입" id="btnJoin" />
+               <input type="button" value="아이디/비밀번호 찾기" id="btnSearch" />
+            </p>
+         </fieldset>
+      </form>
+   </body>
+</html>
+
+<!-- -h1 자리이동시켜줌-margine
+--26- 선언문먼저
+-28- 크기자리
+-29-boder색깔 큭기 조정 /bordder-ladios로 둥근모양
+- 36 - float 옆으로 오게만들고
+42- fioat
+- 45 -clear:both 자리지정
+-40- 41-42-넓이가질수있게끔 속성을 변경시켜줌<disply->
+- 44- box안에 사이지즈 여백주기
+-49- 로그인하기 -옆에여백주기52- 그림자를 보더로 없애기 
+    53-배치조정-54-둥근모양
+-56-두개번튼 지정 58 -버튼1에 위치지정
+    -59-여백주기
+61-input으로 버튼찾아서
+    62,63,64-65-66둥근모양 -->

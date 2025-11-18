@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title> 상대 좌표 방식으로 배치하기 </title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         body { 
+            font:12px "맑은 고딕",돋움,arial; 
+            margin:20px 0px; 
+            }
+         h1 { 
+            font-size:2em; 
+            color:#ffffff; 
+            margin:0px; 
+            padding:5px 50px; 
+            background-color:#666; 
+            }
+         h2 {
+            font-size:1.5em;
+            padding-left:120px;
+            padding-top:30px;
+            letter-spacing:-2px;
+            text-shadow:-1px -1px 15px #000;
+            }
+         h3 {
+            font-size:1.1em;
+            padding-left:120px;
+            letter-spacing:-1px;
+            font-weight:normal;
+            color:#8c8c8c;
+            }
+         p {
+            text-align:right;
+            padding-right:40px;
+            }
+         a {
+            color:#333;
+            text-decoration:none;
+            font-weight:bold;
+            font-family:"Arial Black",arial;
+            }
+         a:hover {
+            color:#093;
+            }
+         /* Layout */
+         section {
+            margin:0 auto;
+            width:750px;
+            }
+         div {
+            width:342px;
+            height:150px;
+            margin-left:20px;
+            margin-top:20px;
+            float:left;
+            }
+         .book1 {
+            background:url(images/bg_sm01.png) no-repeat;/* (반복하지마) */
+            }
+         .book2 {
+            background:url(images/bg_sm02.png) no-repeat;
+            }
+         .book3 {
+            background:url(images/bg_sm03.png) no-repeat;
+            clear:left;
+            }
+         .book4 {
+            background:url(images/bg_sm04.png) no-repeat;
+            }
+         input[type="search"] { /* (검색창 디자인) */
+            padding:5px;
+            width:220px;
+            background-color:#efefef;
+            }
+         input[type="submit"] {
+            padding:7px 10px;
+            background-color:#000;
+            color:#fff;
+            border:none;
+            border-radius:5px;
+            }
+         /* nav Layout */
+         nav{
+            width:800px;
+            margin: 0 auto;
+            height: 40px;
+         }
+         #logo{
+            position: relative;
+            top:0;
+            left:-40px;
+            float: left;/* li들을 띄워서 옆으로 정렬 float태그사용 */
+         }
+         #topMenu{
+            float: right;
+            position: relative; /* (내컨탠츠위치가 기준이다) */
+            top: -30px;
+         }
+         #topMenu li{
+            list-style: none;
+            float: left;
+         }
+         #topMenu .liStyle{margin-right: 10px;}  
+         #topMenu .liStyle a{position: relative;}
+         #topMenu .liStyle a::after{
+            content:"";
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            background: #333;
+            top: 3px;
+            right: -5px;
+ /* 탑에서 양수는 밑으로 내려오고, 음수를 써야 위로 올라감 -소스검사로 -값을 조정확인후 
+ 스타일에 입력 */
+
+         }
+         #searchForm{
+            position: relative;
+            left: 20px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <nav>
+         <figure>
+            <img src="images/top_logo.jpg" width="187" height="39" alt="정보문화사" id="logo"/>
+         </figure>
+         <ul id="topMenu">
+            <li class="liStyle"><a href="#">홈</a></li>
+            <li class="liStyle"><a href="#">회사소개</a></li>
+            <li class="liStyle"><a href="#">사이트맵</a></li>
+            <li><a href="#">도움말</a></li>
+         </ul>
+         <form id="searchForm">
+            <input type="search" name="seachBox" />
+            <input type="submit" value="검색">
+         </form>
+      </nav>
+      <header>
+         <h1>시리즈 안내</h1>
+      </header>
+      <section>
+         <div class="book1">
+            <h2>실력이 탐나는 시리즈</h2>
+            <h3>전략적 실전 대비 입문서 </h3>
+            <p><a href="http://infopub.co.kr" target="_blank" title="정보문화사 사이트로 이동합니다.">&gt;&gt; GO</a></p>
+         </div>
+         <div class="book2">
+            <h2>길라잡이 시리즈</h2>
+            <h3>단계별로 배울 수 있는 지침서</h3>
+            <p><a href="http://infopub.co.kr" target="_blank" title="정보문화사 사이트로 이동합니다.">&gt;&gt; GO</a></p>
+         </div>
+         <div class="book3">
+            <h2>회사 실무에 힘을 주는 시리즈</h2>
+            <h3>자연스럽게 익히는 OA 핵심 기능 수록 </h3>
+            <p><a href="http://infopub.co.kr" target="_blank" title="정보문화사 사이트로 이동합니다.">&gt;&gt; GO</a></p>
+         </div>
+         <div class="book4">
+            <h2>눈길 시리즈</h2>
+            <h3>IT 실무 교재 시리즈</h3>
+            <p><a href="http://infopub.co.kr" target="_blank" title="정보문화사 사이트로 이동합니다.">&gt;&gt; GO</a></p>
+         </div>
+      </section>
+   </body>
+</html>
+
+<!-- -이미지인 정보문화사를 가운대로 보내기위해서 box로 큰틀을 먼저 만들어야 정렬하기 쉬움
+- 홈,회사소개,사이트맵,도움말을 위지옮겨줌
+- 선택자를 먼저 타이핑하고나서 작업진해하는게 쉬움
+- li들을 띄워서 옆으로 정렬 float태그사용
+- 탑에서 양수는 밑으로 내려오고, 음수를 써야 위로 올라감 -소스검사로 -값을 조정확인후 스타일에 입력
+- liStyle 안에 간격을 줌 
+- 
+ -->

@@ -1,0 +1,46 @@
+a{text-decoration: none; color: #000}
+
+nav{
+    background: rgb(0, 153, 255);
+    padding: 20px 0;
+}
+nav>ul{
+    display: flex;
+    position: relative;
+    
+}
+nav>ul>li{position: relative;}
+nav>ul>li>a{
+    padding: 19px 20px; /* 손가락영영을 넓여줘야함 */
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+nav>ul>li>ul{
+    display: none; position: absolute;
+    top: 36px;/* 손가락영영을 넓여줘야함 -우클릭해서 검사해서 수치확인*/
+    width: 100%;
+    
+}
+nav>ul:hover>li>ul{display: block; text-align: center;}
+nav>ul>li>ul{
+    transition: .5s; /* 0.5초동안 나타남 */
+}
+nav>ul>li>ul>li:hover{ /* (hover마아스올렸을때 액션지정) */
+    background: red;
+}
+nav>ul>li>ul>li>a{ /* a는 하이퍼링크기능 */
+    display: block; /* (인라인요소롸서 블럭화 시켜야 padding값이 먹힘) */
+    padding: 20px; /* 마우스영역을 넓혀줌 */
+}
+nav>ul>li>ul>li:hover>a{
+    color: #fff;
+}
+
+
+/* 12- position: relative;-내가기준이야
+
+띄어쓰기는 하위속성을 선택하라고 할때 띄어스기해야함
+10- 글시간격 떨어뜨려줌
+12-uppercass -대문자로 바꿔
+font-weight: bold;글자긁게 */
