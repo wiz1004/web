@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원 svg애니매이션</title>
+    <style>
+        .cir{width: 150px; height:150px;}
+        .cir circle{
+            fill:none;
+            stroke-width: 10px;
+            stroke-linecap: round;
+            animation: loader 4s infinite ease-in-out;
+            transform-origin: 50% 50%;
+        }
+        @keyframes loader {
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(360deg);}
+            100%{transform: rotate(0deg);}
+        }
+        .cir circle:nth-child(1){
+            stroke:aqua; 
+            stroke-dasharray: 30;
+            animation-delay: 0.4s;
+        }
+        .cir circle:nth-child(2){
+            stroke:rgb(223, 192, 14); 
+            stroke-dasharray: 150;
+            animation-delay: -0.4s;
+        }
+        .cir circle:nth-child(3){
+            stroke:rgb(74, 21, 219); 
+            stroke-dasharray: 200;
+            animation-delay: -0.8s;
+        }
+        .cir circle:nth-child(4){
+            stroke:rgb(163, 10, 61); 
+            stroke-dasharray: 240;
+            animation-delay: 0.1s;
+        }
+    </style>
+</head>
+<body>    
+    <svg class="cir">
+        <circle cx="75" cy="75" r="10"></circle>
+        <circle cx="75" cy="75" r="30"></circle>
+        <circle cx="75" cy="75" r="50"></circle>
+        <circle cx="75" cy="75" r="70"></circle>
+
+    </svg>
+</body>
+</html>
+
+
+<!-- 
+circle -  원그리기  
+
+linecap - 선끝모양
+    butt - 기본모양
+    round - 둥근모양
+    square - 네모모양
+
+    animation 속성
+        stroke-dasharray - 선의 길이와 간격을 지정
+        stroke-dashoffset - 선의 시작점을 지정
+
+        transition -origin - 변화과정을 지정
+        keyframes - 애니메이션의 단계별 상태를 정의
+        loader - 로딩 애니메이션 rotate 360도 회전  0>360도>0으로
+    21- 안쪽원에 설정하기
+        animation delay - 애니메이션 시작시간 지연 
+-->
