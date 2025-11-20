@@ -1,0 +1,165 @@
+#wrap{
+    margin: 50px;
+}
+.scssBox{
+    width: 100%;
+    padding: 20px;
+    background: #ddd;
+    margin-bottom: 20px;
+}
+//변수
+$main-color: #f4a320;
+$sub-color: #f74a6c;
+$padding-size: 20px;
+
+.box{
+    background: $main-color;
+    padding:$padding-size
+}
+
+//중첩
+.card{
+    padding: $padding-size;
+    background: #b1f675;
+    .title{
+        font-size: $padding-size;
+    }
+    .desc{
+        color: $sub-color;
+    }
+}
+//hover등등 상태
+.btn{
+   padding: 12px 20px;
+   background: #333;
+   color: #ffffff;
+   border: none; 
+   &:hover{
+         background: $main-color;
+         cursor: pointer;
+   }
+}
+
+//연산
+.calc{
+    width: 100px + 50px;
+    height: (100px / 2);
+    margin: 10px * 2;
+    background: #f4a320;
+    padding: $padding-size - 5px;
+}
+
+//믹스인
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin circle($size){
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: red;
+}
+.profile{
+    width: 300px;
+    height: 300px;
+    background:blue;
+    @include flexCenter();
+}
+.circle{
+    @include circle(100px);
+}
+
+//Extend
+%button-base{
+    padding: 10px 20px;
+    border-radius:6px;
+    color: #fff;
+}
+.btn-primary{
+    @extend %button-base;
+    background: #dc23f0;
+}
+.btn-danger{
+    @extend %button-base;
+    background: #f02323;
+}
+
+@function half($size){
+    @return $size / 2;
+}
+.half-box{
+    width: half(200px);
+    height: half(200px);
+    background: #f4a320;
+}
+
+//map
+$colors: (
+    primary:#4a6cf7,
+    danger:#ff5252,
+);
+@each $name, $color in $colors{
+    .text-#{$name}{
+        color: $color;
+    }
+}
+
+//for 반복문
+@for $i from 1 through 3{
+    .m-#{$i}{
+        margin: $i * 10px;
+    }
+}
+
+.icon-wrap{
+    display: flex;
+    gap: 20px;
+}
+@for $j from 1 through 3{
+    .icon-#{$j}{
+        width: 50px;
+        height: 50px;
+        background:url(./../img/icon#{$j}.svg) no-repeat center/cover; 
+    }
+}
+//반복문
+$tags: html, css, js;
+
+@each $tag in $tags{
+    .tag-#{$tag}{
+        padding: 6px 12px;
+        background: #05d447;
+        border-radius: 6px;
+        margin-bottom: 2px;
+    }
+}
+
+//조건문
+@mixin theme($mode){
+    @if $mode == dark {
+        background: #000;
+        color: #fff;
+    }
+    @else if $mode == light{
+        background: #fff;
+        color: #000;
+    }
+}
+.theme-box{
+    @include theme(light)
+}
+
+
+/* $.표시는 scss에서 변수(변화하는 값)쓸때 사용
+
+중첩사용하기 - 부모요소안에 자식요소를 넣어서 작성하는 방법
+연산 - 띄어쓰기 곡해야함
+
+믹스인 - 자주 사용하는 속성들을 묶어서 재사용할 수 있게 하는 기능
+@mixin 함수 - 미리 정의된 기능을 호출해서 값을 반환받는 기능
+믹스인불러올때는 @include 함수명;
+
+
+*/
